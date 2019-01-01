@@ -29,9 +29,9 @@ try:
 
                 day = date(int(datetime.strftime(now, "%Y")), int(datetime.strftime(now, "%m")), int(datetime.strftime(now, "%d")))-date(int(datetime.strftime(now, "%Y")), 1, 1)
                 if int(datetime.strftime(now, "%Y")) % 4 != 0:
-                    percent = (day.days * 100) / 365
+                    percent = ((day.days + 1) * 100) / 365
                 else:
-                    percent = (day.days * 100) / 366
+                    percent = ((day.days + 1) * 100) / 366
 
                 convert = findall(r'\d', datetime.strftime(now, "%H").zfill(2)+
                 datetime.strftime(now, "%M").zfill(2)+
